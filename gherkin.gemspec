@@ -1,7 +1,7 @@
 # encoding: utf-8
 Gem::Specification.new do |s|
   s.name        = 'gherkin'
-  s.version     = '5.1.0'
+  s.version     = '6.0.13'
   s.authors     = ["Gáspár Nagy", "Aslak Hellesøy", "Steve Tooke"]
   s.description = 'Gherkin parser'
   s.summary     = "#{s.name}-#{s.version}"
@@ -11,10 +11,10 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.required_ruby_version = ">= 1.9.3"
 
-  # TODO: Add this dependency before making a release
-  # s.add_dependency 'cucumber-messages', SOME_VERSION
+  s.add_dependency 'c21e', '~> 1.1.5'
+  s.add_dependency 'cucumber-messages', '~> 1.0.4'
 
-  s.add_development_dependency 'bundler'
+  s.add_development_dependency 'bundler', '~> 1.16'
   s.add_development_dependency 'rake',  '~> 10.5'
   s.add_development_dependency 'rspec', '~> 3.7'
 
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'coveralls'
 
   s.executables      = ["gherkin-ruby", "gherkin"]
-  s.rubygems_version = ">= 1.6.1"
+  s.rubygems_version = ">= 1.6.1", '~> 0.8'
   s.files            = Dir[
     'README.md',
     'LICENSE',
